@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>المدير</title>
   <!-- from downfile -->
-  <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />    
+  <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />
   <link href="main_files/yosri/font-awesome.min.css" rel="stylesheet" type="text/css" />
    <!-- from internet -->
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -16,30 +16,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="main_files/font-awesome.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="main_files/ionicons.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
 
-  <link rel="stylesheet" href="main_files/adminlte.css">
+  <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
-  <link href="main_files/css.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
   <!-- bootstrap rtl -->
-  <link rel="stylesheet" href="main_files/bootstrap-rtl.css">
+  <link rel="stylesheet" href="{{ asset('adminlte/css/bootstrap-rtl.min.css') }}">
   <!-- template rtl version -->
 
-  <link rel="stylesheet" href="main_files/custom-style.css">
+  <link rel="stylesheet" href="{{ asset('adminlte/css/custom-style.css')}}">
 
-  <script src="main_files/jquery_002.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- font awesome -->
-    <link rel="stylesheet" href="main_files/font-awesome_002.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 
-  <script src="main_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+  <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 
-    <link rel="stylesheet" href="main_files/ratingstar.css">    
+    <link rel="stylesheet" href="{{ asset('rating/ratingstar.css') }}">
 
-    <script type="text/javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />
+  <link href="main_files/yosri/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="main_files/font-awesome.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="main_files/ionicons.css">
+<!-- Theme style -->
+
+<link rel="stylesheet" href="main_files/adminlte.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="main_files/css.css" rel="stylesheet">
+
+<!-- bootstrap rtl -->
+<link rel="stylesheet" href="main_files/bootstrap-rtl.css">
+<!-- template rtl version -->
+
+<link rel="stylesheet" href="main_files/custom-style.css">
+
+<script src="main_files/jquery_002.js"></script>
+<!-- font awesome -->
+  <link rel="stylesheet" href="main_files/font-awesome_002.css">
+
+<script src="main_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+
+  <link rel="stylesheet" href="main_files/ratingstar.css">
+
+
+  <script type="text/javascript">
       var csrf = 'jhFvWsr4IQbWxVg44WEM64mv4GtyiRYMAD9lKWox';
     </script>
 
@@ -53,18 +81,18 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
-     
+
     </ul>
 
     <!-- SEARCH FORM -->
-  
 
- 
+
+
     <!-- Right navbar links -->
     <ul class="navbar-nav mr-auto">
       <!-- Messages Dropdown Menu -->
-           <li style="margin-left: 200px;"> <a href="{{ url('e_pssword') }}">Edit Password </a></li>
- 
+           <li style="margin-left: 200px;"> <a href="{{ url('e_pssword') }}">تغير كلمة السر </a></li>
+
            <li class="nav-item">
 
                 <a href="{{ route('logout') }}"
@@ -84,15 +112,15 @@
 <!-- /.navbar -->
 <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
     <!-- Left navbar links -->
-  
-   
+
+
     <div class="form-control">
     <div class="form-group">
               @include('flash-message')
                @yield('content3')
                </div>
                  </div>
-                 
+
   </nav>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 434px;">
@@ -122,27 +150,27 @@
                          with font-awesome or any other icon font library -->
 
 
-                    
-                        
+
+
                             <li class="nav-item">
                                 <a href="{{ url('c_adminsave') }}" class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
 
-                                        إضافة بيانات مدير   
-                                       
+                                        إضافة بيانات مدير
+
                                     </p>
                                 </a>
                             </li>
 
-                            
+
                             <li class="nav-item">
                             <a href="{{ url('c_doctorsave') }}" class="nav-link">
                                 <i class="nav-icon fa fa-calendar"></i>
                                 <p>
-                                    اضافة بياتات طبيب           
+                                    اضافة بياتات طبيب
 
-                                   
+
                                 </p>
                             </a>
                         </li>
@@ -151,7 +179,7 @@
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                        تأكيد حساب طبيب
-                                        
+
                                     </p>
                                 </a>
                             </li>
@@ -159,30 +187,30 @@
                             <a href="{{ url('m_view') }}" class="nav-link">
                                 <i class="nav-icon fa fa-calendar"></i>
                                 <p>
-                                ادارة بيانات طبيب 
-                                    
+                                ادارة بيانات طبيب
+
                                 </p>
                             </a>
                         </li>
-                        
-                       
-                        
+
+
+
                             <li class="nav-item">
                                 <a href="#"  class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                     تفريغ الحجوزات
-                                        
+
                                     </p>
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item">
                                <a  href="{{ url('choose') }}" class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                        عرض الحجوزات
-                                       
+
                                     </p>
                                 </a>
                             </li>
@@ -191,18 +219,18 @@
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                    ادارة التخصصات
-                                        
+
                                     </p>
                                 </a>
                             </li>
-                            
-                            
+
+
                             <li class="nav-item">
                                 <a href="{{ url('city') }}"  class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                     ادارة المدينة
-                                        
+
                                     </p>
                                 </a>
                             </li>
@@ -211,17 +239,17 @@
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   ادارةالمحلية
-                                        
+
                                     </p>
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a href="{{ url('qrcodr') }}"  class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   انشاء QR_CODE
-                                        
+
                                     </p>
                                 </a>
                             </li>
@@ -232,27 +260,27 @@
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   انشاء QR_CODE_phone
-                                        
+
                                     </p>
                                 </a>
                             </li>
-                    
-                            
+
+
                             <li class="nav-item">
                                 <a href="{{ url('qrcodr_email') }}"  class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   انشاء QR_CODE_email
-                                        
+
                                     </p>
                                 </a>
-                            </li> 
+                            </li>
                             <li class="nav-item">
                                 <a href="{{ url('qrcodr_geo') }}"  class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   انشاء QR_CODE_GPS
-                                        
+
                                     </p>
                                 </a>
                             </li>
@@ -261,12 +289,12 @@
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
                                   انشاء QR_CODE_SMS
-                                        
+
                                     </p>
                                 </a>
                             </li>
-                    
-                    
+
+
 
                 </ul>
             </nav>
@@ -276,7 +304,7 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-    
+
 
 <!-- jQuery -->
 <script src="main_files/jquery_003.js"></script>
@@ -302,21 +330,21 @@
 // rating
 var rate;
 $('#rating-student').starrr({
-  change: function(e, value){ 
-  	rate = value;  	       
+  change: function(e, value){
+  	rate = value;
     if (value) {
-      $('.your-choice-was').show();      
+      $('.your-choice-was').show();
     } else {
       $('.your-choice-was').hide();
     }
   }
 });
 // ajax submit
-$("#submit").click(function(){	
+$("#submit").click(function(){
 	var name = $('#name').val();
   var id = $('#id').val();
 
-	$.ajax({		
+	$.ajax({
          url:'http://www.ultimate-erp.com/nms/public/getmsg',
          type: 'post',
          data: {v1 : name, v2 : id , v3 : rate,_token:csrf},
@@ -324,7 +352,7 @@ $("#submit").click(function(){
         	if(response.status == 1){
             	$('.msg').html('<b>تم التقييم بنجاح</b>');
         	}else{
-            	$('.msg').html('<b>يوجد خطاء !!</b>');        		
+            	$('.msg').html('<b>يوجد خطاء !!</b>');
         	}
         }
     });

@@ -73,13 +73,17 @@ Route::get('e_pssword1/{id}', 'editpassword\e_passwordController@Stort');
 
 
 ///////////////qr_code////////////
-
-
 Route::get('qrcodr','qrcodeController@index');
 Route::post('qr_builder','qrcodeController@qr_builder');
-
-
 Route::get('qrcodr_phone','qrcodeController@phone');
 Route::get('qrcodr_email','qrcodeController@email');
 Route::get('qrcodr_geo','qrcodeController@geo');
 Route::get('qrcodr_sms','qrcodeController@sms');
+
+
+
+
+/////////////test////////////
+
+
+Route::get('GetSubCatAgainstMainCatEdit/{c_city}', 'admin\c_doctorController@GetSubCatAgainstMainCatEdit');

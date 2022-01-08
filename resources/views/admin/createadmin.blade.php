@@ -4,7 +4,7 @@
 @section('content1')
 
 <!DOCTYPE html>
-<html lang="en">
+
 <body>
 </div>
     </div>
@@ -25,15 +25,15 @@
 
 
 
- 
+
 <div class="card card-warning">
               <div class="card-header">
                 <h3 class="card-title">اضافة بيانات مدير</h3>
               </div>
               <!-- /.card-header -->
-             
-             
-                <form action="{{ url('adminStort')}}"  method="GET"> 
+
+
+                <form action="{{ url('adminStort')}}"  method="GET">
                  <!-- <form method="GET">   -->
               @csrf
                   <!-- text input -->
@@ -47,14 +47,14 @@
                      </span>
                       @enderror
                   </div>
-                
 
-                 
-                 
+
+
+
 
                   <!-- input states -->
-          
-                 
+
+
 
 
  <!-- textarea -->
@@ -62,7 +62,12 @@
                     <!-- text input -->
                     <div class="form-group">
                     <label>البريد الالكتروني</label>
-                    <input id="name" type="email" class="form-control @error('name') is-invalid @enderror" name="a_username" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input
+                      id="name"
+                      type="email"
+                      class="form-control @error('name') is-invalid @enderror"
+                      name="a_username" value="{{ old('name') }}"
+                      required autocomplete="name" autofocus>
 
                            @error('name')
                      <span class="invalid-feedback" role="alert">
@@ -73,7 +78,18 @@
                     <!-- text input -->
                     <div class="form-group">
                     <label>كلمة السر</label>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="a_password" required autocomplete="new-password">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i  class="fa fa-fw fa-eye field-icon toggle-password" id="eye"></i></div>
+                        <input
+                          id="password"
+                          type="password"
+                          class="form-control @error('password') is-invalid @enderror"
+                          name="password"
+                          required autocomplete="new-password"
+                          data-toggle="password">
+
+                    </div>
+
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -84,14 +100,14 @@
 
 <br>
      <div class="form-group  pull-right">
-            
 
-    
+
+
      <button  class="btn  btn-primary"><a   class="btn  btn-primary" >ارسال</a></button>
 
 
      </div>
-         
+
 
                 </form>
               </div>
@@ -102,11 +118,15 @@
 </div>
 </div>
 </div>
- 
+
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<!-- jQuery -->
+<script src="javascript/showpassword.js"></script>
 
         @endsection
+
+
 </body>
 </html>

@@ -14,9 +14,14 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
   <!-- iCheck -->
+
   <link rel="stylesheet" href="adminlte/plugins/iCheck/square/blue.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+ <!-- bootstrap icons -->
+
+ <link rel="stylesheet" href="css/bootstrap-icons.css">
+
 
   <!-- bootstrap rtl -->
   <link rel="stylesheet" href="adminlte/css/bootstrap-rtl.min.css">
@@ -33,7 +38,7 @@
   </div>
 
   <div class="card">
-  
+
     <div class="card-body login-card-body">
       <p class="login-box-msg">لوحه تسجيل الدخول </p>
 
@@ -45,14 +50,13 @@
 
       <div class="input-group mb-3  form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-          <input id="email" 
-                 type="email" 
-                 name="email" 
-                 class="form-control" 
+          <input id="email"
+                 type="email"
+                 name="email"
+                 class="form-control"
                  placeholder="ایمیل"
                  value="{{ old('email') }}"
-                 required autofocus
-                 >
+                 required autofocus>
 
           <div class="input-group-append">
 
@@ -68,19 +72,30 @@
 
 
  <div class="input-group mb-3 form-group{{ $errors->has('password') ? ' has-error' : '' }} ">
-    <input id="password" name="password" type="password" class="form-control" placeholder="كلمة المرور" required>
-          <div class="input-group-append">
+    <div class="input-group-prepend">
+        <div class="input-group-text"><i  class="fa fa-fw fa-eye field-icon toggle-password" id="eye"></i></div>
+      </div>
+     <input
+        id="password"
+        name="password"
+        type="password"
+        class="form-control"
+        placeholder="كلمة المرور"
+        data-toggle="password" >
+
             <span class="fa fa-lock input-group-text"></span>
              @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+            @endif
+
+        </span>
           </div>
         </div>
 
 
-                     
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
@@ -97,10 +112,10 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    تسجيل الدخول 
+                                    تسجيل الدخول
                                 </button>
 
-                            
+
                             </div>
                         </div>
 </center>
@@ -111,7 +126,7 @@
 
       <!-- /.social-auth-links -->
 
-      
+
     </div>
     <!-- /.login-card-body -->
   </div>
@@ -120,10 +135,16 @@
 
 <!-- jQuery -->
 <script src="adminlte/plugins/jquery/jquery.min.js"></script>
+
 <!-- Bootstrap 4 -->
 <script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- show password -->
+
+
 <!-- iCheck -->
 <script src="adminlte/plugins/iCheck/icheck.min.js"></script>
+<script src="javascript/showpassword.js"></script>
 <script>
   $(function () {
     $('input').iCheck({
@@ -132,6 +153,10 @@
       increaseArea : '20%' // optional
     })
   })
+
+</script>
+<script type="text/javascript">
+    $("#password").password('toggle');
 </script>
 </body>
 </html>
