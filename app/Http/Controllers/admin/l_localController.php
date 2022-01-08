@@ -13,9 +13,9 @@ class l_localController extends Controller
         $city = city::all();
         //return view('admin/category');
        $local = local::all();
-      
-        return view('admin/local' ,compact('local','city'));
-    
+
+        return view('admin.local' ,compact('local','city'));
+
     }
     public function distory($id)
 {
@@ -24,12 +24,12 @@ class l_localController extends Controller
     $Dellocal->delete();
     return back()->with('error','تم الحذف بنجاج');
 
-    
+
 
 }
 public function createlocal()
 {
-    
+
     return view('admin/local');
 
 

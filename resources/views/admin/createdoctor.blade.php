@@ -98,7 +98,7 @@
                      </span>
                       @enderror
                   </div>
-                  
+
                     <!-- text input -->
                     <div class="form-group">
                     <label>رقم الهاتف</label>

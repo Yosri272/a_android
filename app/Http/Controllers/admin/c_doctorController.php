@@ -16,7 +16,7 @@ class c_doctorController extends Controller
     {
         $spe = spe::all();
         $city = DB::table('city')->get();
-        return view('admin/createdoctor' ,compact('spe','city'));
+        return view('admin.createdoctor' ,compact('spe','city'));
 
     }
     public function Stort( Request $request)
@@ -30,7 +30,7 @@ class c_doctorController extends Controller
   $v2=$doctor->d_city =$request->d_city;
   $doctor->d_phone =$request->d_phone;
   $doctor->d_mo =$request->d_mo;
-dd($v2);
+//dd($v2);
   $doctor->d_flag = 0;
   $doctor->save();
   return back()->with('success','تم الاضافة بنجاح');

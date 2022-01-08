@@ -12,7 +12,7 @@
     <style>
         div.a{
 
-    text-align: center;  
+    text-align: center;
     }
     </style>
 </head>
@@ -33,7 +33,7 @@
 
 
 
- 
+
 
   <br>
   <form action="{{ url('speStort')}}" method="GET">
@@ -44,11 +44,11 @@
   <input type="submit" name="Add" value="اضافة">
 
 </form>
-  
+
   <br>
 
   <br>
- 
+
 <div  class="a" class="content-wrapper" style="min-height: 434px;">
             <div class="card">
               <div class="card-header">
@@ -57,7 +57,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <table class="table table-bordered">
-                  <thead>                  
+                  <thead>
                     <tr>
                       <th style="width: 10px">#</th>
                       <th>الاسم </th>
@@ -67,9 +67,9 @@
                   <tbody>
 
                     <tr>
-                    
+
                     @foreach($spe as $data)
-                    
+
                       <td> {{$data->id}}</td>
                       <td>{{$data->s_spe}}</td>
                       <td>
@@ -81,7 +81,7 @@
                 </table>
               </div>
               <!-- /.card-body -->
-             
+
             </div>
             <!-- /.card -->
 
@@ -89,9 +89,9 @@
 
           </div>
 
-           
-</div> 
+
 </div>
-</div>  
-@endsection 
+</div>
+</div>
+@endsection
 </body>
